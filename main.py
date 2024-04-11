@@ -1,1 +1,6 @@
-print("Hello, World!")
+number = int(input(": "))
+
+print(number)
+
+
+
