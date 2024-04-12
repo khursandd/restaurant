@@ -4,5 +4,10 @@
 {% endblock %}
 
 {% block content %}
-
+    {% for product in products %}
+        <img src="{{ product.image.url }}" alt="photo not found">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.price }}</p>
+        <button>add</button>
+    {% endfor %}
 {% endblock %}
