@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import View
 
 from accounts import models as acc_models
+
 from main import models
 
 
