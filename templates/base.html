@@ -6,6 +6,19 @@
 </head>
 <body>
 <h2>username: {{ user.username }}</h2>
+<nav>
+    <ul>
+        {% if user.is_authenticated %}
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Log Out</button>
+            </form>
+        {% else %}
+            <li><a href="{% url 'login' %}">Log In</a></li>
+            <li><a href="{% url 'signin' %}">Sign In</a></li>
+        {% endif %}
+    </ul>
+</nav>
 {% block content %}
 {% endblock %}
 </body>
